@@ -1,0 +1,5 @@
+name = "tk-backup"
+main = "_worker.js"
+compatibility_date = "2025-11-04"
+compatibility_flags = ["nodejs_compat"]
+keep_vars = true
