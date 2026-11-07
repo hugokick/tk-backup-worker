@@ -1,9 +1,10 @@
 // tk-backup: minimal VLESS over WebSocket Worker (single file, no KV, no external fetch)
+// BISECT TEST: cloudflare:sockets static import removed to find the cause of Error 1101
 // Personal backup node for the user's 4 Railway VLESS nodes.
 // The UUID is read from the UUID environment variable (same value as the Railway nodes).
 // Subscription WS path: /?ed=2048
 
-import { connect } from 'cloudflare:sockets';
+// import { connect } from 'cloudflare:sockets'; // TEMP removed for bisection test
 
 const WS_READY_STATE_OPEN = 1;
 const WS_READY_STATE_CLOSING = 2;
